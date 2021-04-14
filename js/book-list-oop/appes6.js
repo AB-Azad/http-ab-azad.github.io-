@@ -28,9 +28,6 @@ class UI{
         // Insert this row to the DOM
         let bookList = document.querySelector('#book-list');
         bookList.appendChild(tr);
-
-        // Add book to the database
-        Storage.addBook(book);
     }
 
    showAlert(message, className){
@@ -143,6 +140,9 @@ document.querySelector('#book-form').addEventListener('submit', function(e){
     } else {
         // Add book to list
         ui.addBookToList(book);
+
+        // Add book to the database
+        Storage.addBook(book);
 
         // Show success message
         ui.showAlert('Book Added Successfully.', 'success');

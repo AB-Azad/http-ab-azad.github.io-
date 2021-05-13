@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <title>Jokes Generator</title>
+  <style type="text/css">
+    .loading{
+      text-indent: -9999px;
+      background-image: url(ajax-loader.gif);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20px;
+    }
+    .checkboxes{
+      margin-bottom: 10px;
+    }
+    .checkboxes .jokes_type{
+      margin-bottom: 5px;
+    }
+    .checkboxes label{
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Jokes Generator</h2>
+    <form>
+      <div class="row checkboxes">
+        <div class="jokes_type">
+          <label for="number">Jokes Type</label>
+        </div>
+        <div>
+          <input type="radio" id="programming" name="type" value="Programming" checked>
+          <label for="programming"> <span class="label-body">Programming</span></label>
+        </div>
+        <div>
+          <input type="radio" id="any" name="type" value="Any">
+          <label for="any"><span class="label-body">Any Type</span></label>
+        </div>
+      </div>
+      <div>
+        <label for="number">Number of jokes</label>
+        <input type="number" id="number">
+      </div>
+      <div>
+        <button class="get-jokes">Get Jokes</button>
+      </div>
+    </form>
+    <ul class="jokes"></ul>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
